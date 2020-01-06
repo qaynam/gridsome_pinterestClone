@@ -21,46 +21,48 @@ import DropDownItem from '~/components/DropDownItem';
             </svg>
           </g-link>
         </div>
-        <DropDown-Menu
-          name="アナリティクス
-        <svg
-          class='gUZ B9u U9O kVc inline'
-          height='12'
-          width='12'
-          viewBox='0 0 24 24'
-          aria-label='analytics-menu-button'
-          role='img'
-        >
-          <path
-            d='M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z'
-          />
-        </svg>"
-          :bold="true"
-          :html="true"
-        >
+        <DropDown-Menu name>
+          <template v-slot:title :bold="true">
+            <div class="font-bold">
+              アナリティクス
+              <svg
+                class="gUZ B9u U9O kVc inline"
+                height="12"
+                width="12"
+                viewBox="0 0 24 24"
+                aria-label="analytics-menu-button"
+                role="img"
+              >
+                <path
+                  d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z"
+                />
+              </svg>
+            </div>
+          </template>
           <DropDown-item>
             <DropDown-link to="/home">概要</DropDown-link>
             <DropDown-link to="/home">オーディエンスサイト</DropDown-link>
             <DropDown-link to="/home">動画</DropDown-link>
           </DropDown-item>
         </DropDown-Menu>
-        <DropDown-Menu
-          name="広告
-        <svg
-          class='gUZ B9u U9O kVc inline'
-          height='12'
-          width='12'
-          viewBox='0 0 24 24'
-          aria-label='analytics-menu-button'
-          role='img'
-        >
-          <path
-            d='M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z'
-          />
-        </svg>"
-          :bold="true"
-          :html="true"
-        >
+        <DropDown-Menu name :bold="true" :html="true">
+          <template v-slot:title>
+            <div class="font-bold">
+              広告
+              <svg
+                class="gUZ B9u U9O kVc inline"
+                height="12"
+                width="12"
+                viewBox="0 0 24 24"
+                aria-label="analytics-menu-button"
+                role="img"
+              >
+                <path
+                  d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z"
+                />
+              </svg>
+            </div>
+          </template>
           <DropDown-item url="/profile">
             <DropDown-link to="/home">設定</DropDown-link>
           </DropDown-item>
@@ -149,14 +151,7 @@ import DropDownItem from '~/components/DropDownItem';
             </div>
           </DropDown-item>
         </DropDown-Menu>
-        <!-- <div class="border-50 rounded-full p-2 mr-2 hover:bg-gray-400">
-          <svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#8e8e8e"
-              d="M8 16c-1.12 0-2.03-.9-2.03-2h4.06c0 1.1-.91 2-2.03 2zm4.72-6.92c1.02.95 1.74 2.19 2.03 3.59H1.25c.29-1.4 1.01-2.64 2.02-3.59V4.67C3.27 2.09 5.39 0 8 0c2.61 0 4.72 2.09 4.72 4.67v4.41z"
-            />
-          </svg>
-        </div>-->
+
         <div class="border-50 rounded-full p-2 mr-2 hover:bg-gray-400">
           <svg
             class="gUZ lZJ U9O kVc"
@@ -173,24 +168,23 @@ import DropDownItem from '~/components/DropDownItem';
             />
           </svg>
         </div>
-        <DropDown-Menu
-          :html="true"
-          name=" <svg
-            class='gUZ B9u U9O kVc'
-            height='22'
-            width='22'
-            viewBox='0 0 24 24'
-            aria-hidden='true'
-            aria-label
-            role='img'
-            fill='#8e8e8e'
-          >
-            <path
-              d='M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z'
-            />
-          </svg>"
-          :bold="true"
-        >
+        <DropDown-Menu :html="true" name=" " :bold="true">
+          <template v-slot:title>
+            <svg
+              class="gUZ B9u U9O kVc"
+              height="22"
+              width="22"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              aria-label
+              role="img"
+              fill="#8e8e8e"
+            >
+              <path
+                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+              />
+            </svg>
+          </template>
           <DropDown-item class="w-64">
             <DropDown-link to="/home">ホームフィードを編集</DropDown-link>
             <DropDown-link to="/home">アカウント設定</DropDown-link>

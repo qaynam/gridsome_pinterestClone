@@ -1,15 +1,14 @@
 <template>
-  <Layout class="bg-red-600">
+  <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <div class="main">
-      <p class="home-links">
-        <!-- <DropDown-Menu name="drop down" :bold="true">
-          <DropDown-item>
-            <DropDown-link to="/home">test item</DropDown-link>
-            <DropDown-link to="/home">test item2</DropDown-link>
-          </DropDown-item>
-        </DropDown-Menu>-->
-      </p>
+      <input
+        v-model="test"
+        type="text"
+        class="border-gray-500 m-5 rounded w-64 h-8 px-2"
+        placeholder="vue test"
+      />
+      <p class="m-5">{{test}}</p>
     </div>
   </Layout>
 </template>
@@ -18,6 +17,11 @@
 export default {
   metaInfo: {
     title: "index"
+  },
+  data() {
+    return {
+      test: ""
+    };
   }
 };
 </script>

@@ -4,9 +4,9 @@
       class="block bg-transparent text-center px-3 py-1 mr-2 border-50 rounded-full hover:bg-gray-400 focus:outline-none"
       @click="drop_list_collapse = !drop_list_collapse"
     >
-      <slot name="title"></slot>
-      <span v-if="html" :class="{ 'font-bold' : bold }" v-html="name"></span>
-      <span v-if="!html" :class="{ 'font-bold' : bold }">{{ name }}</span>
+      <slot name="title" :class="{ 'font-bold' : bold }"></slot>
+      <!-- <span :class="{ 'font-bold' : bold }"></span> -->
+      <!-- <span v-if="!html" :class="{ 'font-bold' : bold }">{{ name }}</span> -->
     </button>
     <transition name="fade">
       <slot v-if="!drop_list_collapse"></slot>
